@@ -5,11 +5,11 @@ public class Example {
 
     public static void main(String[] args) {
         Example e = new Example();
-        String s = e.reverse("abc", new ArrayList<>());        
+        String s = e.reverse_1("abc", new ArrayList<>());        
         System.out.println(s);
     }
 
-    public String reverse(String str, List<String> list) {
+    public String reverse_1(String str, List<String> list) {
         if(list == null)
             list = new ArrayList<>();
         if(str == null){
