@@ -6,7 +6,7 @@ public class Example {
     public static void main(String[] args) {
         Example e = new Example();
         String s = e.reverse_1("abc", new ArrayList<>());        
-        System.out.println(s);
+        System.out.println(s);        
     }
 
     public String reverse_1(String str, List<String> list) {
@@ -29,4 +29,33 @@ public class Example {
         return sb.toString();          
                    
     }
+    public String reverse_2(String str, List<String> list) {
+        if(list == null)
+            list = new ArrayList<>();
+        if (str.length() < 0) {  
+            StringBuffer sb = new StringBuffer();
+            for (String s : list) {
+                sb.append(s);
+            }
+            return sb.toString();          
+            
+        }
+        list.add(str.substring(str.length()-1));
+        return reverse(str.substring(0, str.length()-1), list);            
+    }
+    public String reverse_3(String str, List<String> list) {
+        if(list == null)
+            list = new ArrayList<>();
+        if (str.length() < 0) {  
+            StringBuffer sb = new StringBuffer();
+            for (String s : list) {
+                sb.append(s);
+            }
+            return sb.toString();          
+            
+        }
+        list.add(str.substring(str.length()-1));
+        return reverse(str.substring(0, str.length()-1), list);            
+    }
+    
 }
