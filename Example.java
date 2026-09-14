@@ -9,13 +9,15 @@ public class Example {
         System.out.println(s);        
     }
 
-    public String reverse_1(String str, List<String> list) {
-        if(list == null)
-            list = new ArrayList<>();
+    public String reverse_1(String string) {
+        
         if(str == null){
             str = "";
             return str;
         }
+
+        
+        list = new ArrayList<>();
             
         for(int i = str.length()-1; i>=0 ; i--){
             list.add(str.substring(i));
