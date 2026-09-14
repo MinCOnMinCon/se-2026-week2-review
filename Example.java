@@ -12,22 +12,16 @@ public class Example {
     public String reverse_1(String str, List<String> list) {
         if(list == null)
             list = new ArrayList<>();
-        if(str == null){
-            str = "";
-            return str;
-        }
+        if (str.length() < 0) {  
+            StringBuffer sb = new StringBuffer();
+            for (String s : list) {
+                sb.append(s);
+            }
+            return sb.toString();          
             
-        for(int i = str.length()-1; i>=0 ; i--){
-            list.add(str.substring(i));
-            str = str.substring(0, i);
         }
-         
-        StringBuffer sb = new StringBuffer();
-        for (String s : list) {
-            sb.append(s);
-        }
-        return sb.toString();          
-                   
+        list.add(str.substring(str.length()-1));
+        return reverse(str.substring(0, str.length()-1), list);            
     }
     public String reverse_2(String str, List<String> list) {
         if(str == null)
