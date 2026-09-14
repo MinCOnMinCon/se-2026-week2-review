@@ -9,7 +9,7 @@ public class Example {
         System.out.println(s);        
     }
 
-    public String reverse_1(String string) {
+    public String reverse_1(String str) {
         
         if(str == null){
             str = "";
