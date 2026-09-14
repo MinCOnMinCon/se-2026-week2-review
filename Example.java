@@ -24,9 +24,11 @@ public class Example {
         return reverse(str.substring(0, str.length()-1), list);            
     }
     public String reverse_2(String str, List<String> list) {
+        if(str == null)
+            return "";
         if(list == null)
             list = new ArrayList<>();
-        if (str.length() < 0) {  
+        if (str.length() == 0) {  
             StringBuffer sb = new StringBuffer();
             for (String s : list) {
                 sb.append(s);
@@ -35,7 +37,7 @@ public class Example {
             
         }
         list.add(str.substring(str.length()-1));
-        return reverse(str.substring(0, str.length()-1), list);            
+        return reverse_2(str.substring(0, str.length()-1), list);            
     }
     public String reverse_3(String str, List<String> list) {
         if(list == null)
